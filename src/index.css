@@ -4,28 +4,40 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  font-family: "Hind Siliguri", sans-serif;
+  font-family: "Hind", sans-serif;
+}
+
+:root {
+  --bgclr-primary: #d5b4b4;
+  --bgclr-secondary: #e4d0d0;
+  --bgclr-dark: #867070;
+  --bgclr-light: #f5ebeb;
+
+  --txclr-primary: #151515;
+  --txclr-secondary: #3c415c;
+  --txclr-dark: #301b3f;
+  --txclr-light: #b4a5a5;
 }
 
 body {
-  background-color: antiquewhite;
+  background-color: var(--bgclr-light);
 }
 
 .header {
   display: flex;
   align-items: center;
   gap: 20px;
-  background-color: plum;
-  color: navy;
+  background-color: var(--bgclr-primary);
+  color: var(--txclr-secondary);
+  padding: 20px;
   height: 10vh;
 }
 
-.title {
-  padding: 10px;
+.logo {
+  height: 40px;
+  width: auto;
 }
 
-.hello-btn {
-  height: 40px;
-  width: 75px;
-  cursor: pointer;
+.title {
+  font-family: "Crimson Text", sans-serif;
 }
