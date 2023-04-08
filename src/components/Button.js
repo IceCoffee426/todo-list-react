@@ -1,7 +1,6 @@
 import React, { Component } from "react";
-import Header from "./Header";
 
-export default class App extends Component {
+export default class Button extends Component {
   constructor(props) {
     super(props);
     this.sayHi = this.sayHi.bind(this);
@@ -13,6 +12,6 @@ export default class App extends Component {
   }
 
   render() {
-    return <Header title="React App" />;
+    return <button onClick={this.sayHi}>Hello</button>;
   }
 }

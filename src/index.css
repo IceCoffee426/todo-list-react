@@ -4,15 +4,28 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  font-family: "Hind Siliguri", sans-serif;
 }
 
 body {
-  font-family: "Hind Siliguri", sans-serif;
   background-color: antiquewhite;
 }
 
-.title {
+.header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
   background-color: plum;
   color: navy;
+  height: 10vh;
+}
+
+.title {
   padding: 10px;
+}
+
+.header button {
+  height: 40px;
+  width: 75px;
+  cursor: pointer;
 }
