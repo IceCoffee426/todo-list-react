@@ -1,31 +1,33 @@
-import React, { Component } from "react";
-import Button from "./Button";
+import React, { Component, useState } from "react";
 
-export default class Header extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      count: 0,
-    };
-    this.countUp = this.countUp.bind(this);
-  }
+function Button({ funct }) {
+  // const sayHi = function () {
+  //   console.log("Hi");
+  // };
 
-  countUp() {
+  return (
+    <button className="hello-btn" onClick={funct}>
+      Hello!
+    </button>
+  );
+}
+
+export default function Header({ appName }) {
+  const [count, setCount] = useState(0);
+
+  const countUp = function () {
     // MUST ALWAYS USE SET STATE, DO NOT MODIFY STATE WITHOUT USING THIS FUNCTION
-    this.setState({ count: (this.state.count += 1) });
-    alert("Hello world! Welcome to my React app.");
-    console.log(`${this.state.count} clicks`);
-  }
+    //   The count state doesn't fully update until after the function has completed,
+    // so the console.log is 1 iteration behind the value in the "p" element below
+    setCount((count) => count + 1);
+    console.log(`Button has been clicked ${count} times.`);
+  };
 
-  render() {
-    return (
-      <div className="header">
-        <h1 className="title">{this.props.title}</h1>
-        <Button count={this.state.count} countUp={this.countUp} />
-        <p className="count">
-          You clicked on the button {this.state.count} time(s).
-        </p>
-      </div>
-    );
-  }
+  return (
+    <div className="header">
+      <h1 className="title">{appName}</h1>
+      <Button funct={countUp} />
+      <p className="count">You clicked on the button {count} time(s).</p>
+    </div>
+  );
 }
