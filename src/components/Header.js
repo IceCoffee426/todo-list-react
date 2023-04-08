@@ -21,7 +21,7 @@ export default class Header extends Component {
     return (
       <div className="header">
         <h1 className="title">{this.props.title}</h1>
-        <Button count={this.countUp} />
+        <Button count={this.state.count} countUp={this.countUp} />
         <p className="count">
           You clicked on the button {this.state.count} time(s).
         </p>
