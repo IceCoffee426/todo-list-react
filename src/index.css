@@ -41,3 +41,53 @@ body {
 .title {
   font-family: "Crimson Text", sans-serif;
 }
+
+main {
+  min-height: 85vh;
+}
+
+.input-form {
+  padding: 20px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.task-list {
+  padding: 20px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.task-list li {
+  background-color: var(--bgclr-dark);
+  color: var(--bgclr-light);
+  padding: 5px 15px;
+}
+
+footer {
+  background-color: var(--txclr-secondary);
+  color: var(--txclr-light);
+  height: 5vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+footer p,
+footer a {
+  font-family: "Crimson Text", sans-serif;
+}
+
+footer a {
+  color: var(--txclr-light);
+  text-decoration: none;
+}
+
+footer a:hover,
+footer a:focus {
+  text-decoration: underline;
+}
