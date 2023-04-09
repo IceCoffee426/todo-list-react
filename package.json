@@ -1,16 +1,25 @@
 {
-  "name": "cv-generator",
+  "name": "todo-list-react",
   "version": "1.0.0",
-  "description": "Enter your information to generate a personalised CV.",
+  "description": "Keep track of your tasks with this to-do list.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server --mode development --open --hot",
     "build": "webpack --mode production"
   },
-  "author": "IceCoffee426",
+  "author": "ShubsMastan",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shubsmastan/todo-list-react.git"
+  },
   "license": "MIT",
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.4.0",
+    "@fortawesome/free-brands-svg-icons": "^6.4.0",
+    "@fortawesome/free-regular-svg-icons": "^6.4.0",
+    "@fortawesome/free-solid-svg-icons": "^6.4.0",
+    "@fortawesome/react-fontawesome": "^0.2.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "uniqid": "^5.4.0"
