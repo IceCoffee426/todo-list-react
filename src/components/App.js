@@ -1,19 +1,21 @@
 import React, { Component, useState } from "react";
 import Overview from "./Overview";
+import Logo from "../images/github-logo.png";
+import uniqid from "uniqid";
 
 export default function App() {
-  const [task, setTask] = useState({ text: "" });
+  const [task, setTask] = useState({ text: "", id: uniqid() });
   const [tasks, setTasks] = useState([]);
 
   const handleChange = (e) => {
-    setTask({ text: e.target.value });
+    setTask({ text: e.target.value, id: task.id });
   };
 
   const submitTask = (e) => {
     e.preventDefault();
     // Not using "push" here as state should be treated as immutable!!
     setTasks(tasks.concat(task));
-    setTask({ text: "" });
+    setTask({ text: "", id: uniqid() });
   };
 
   return (
@@ -39,9 +41,11 @@ export default function App() {
       </main>
       <footer>
         <a href="https://github.com/IceCoffee426">IceCoffee426</a>
-        <p>&copy; MMXXIII</p>
+        <a href="https://github.com/IceCoffee426">
+          <img className="gh-logo" src={Logo}></img>
+        </a>
+        <p>MMXXIII &copy;</p>
       </footer>
-      {/* Other components in the app will go here */}
     </div>
   );
 }

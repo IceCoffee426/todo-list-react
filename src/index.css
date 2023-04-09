@@ -69,7 +69,7 @@ main {
 
 footer {
   background-color: var(--txclr-secondary);
-  color: var(--txclr-light);
+  color: #fff;
   height: 5vh;
   display: flex;
   align-items: center;
@@ -83,11 +83,16 @@ footer a {
 }
 
 footer a {
-  color: var(--txclr-light);
+  color: #fff;
   text-decoration: none;
 }
 
 footer a:hover,
 footer a:focus {
   text-decoration: underline;
+}
+
+.gh-logo {
+  width: 20px;
+  height: auto;
 }
