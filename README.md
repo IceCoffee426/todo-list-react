@@ -8,11 +8,11 @@ This is an app created using React.js which allows the user to input Todo tasks,
 
 ## How It Was Made
 
-- Initialise a React.js app using Webpack and Babel [dev dependencies](https://www.youtube.com/watch?v=h3LpsM42s5o).
+- Initialised a React.js app using Webpack and Babel [dev dependencies](https://www.youtube.com/watch?v=h3LpsM42s5o).
 - It was incredibly helpful to learn more about how to use Webpack and other modules from scratch instead of relying on "create-react-app".
-- Once React was up and running, I learnt how to use JSX to create components and deploy to them to the app (the focus on this part was to learn the different react syntax and methods).
-- Another part of the challenge here was that the React documentation was updated recently (at the time of creation) and thus many of the tutorials used the old syntax. It was great to learn both ways of doing things simultaneously but I made sure to focus on the most up-to-date React methods and using functional components instead of class components.
-- In addition, this was the first project where I used a sensible Git workflow (regular commits and squashing when reaching milestones in production).
+- Used JSX to create components and deploy to them to the app (the focus on this part was to learn JSX, state and hooks).
+- React documentation was updated at time of creation: made sure to focus on the most up-to-date React methods and using functional components instead of class components.
+- Used a sensible Git workflow (regular commits and squashing when reaching milestones in production).
 
 ## Author
 

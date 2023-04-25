@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Header from "./components/Header.js";
 import TaskForm from "./components/TaskForm.js";
-import Tasks from "./components/Tasks.js";
+import Task from "./components/Task.js";
 import Footer from "./components/Footer.js";
 import uniqid from "uniqid";
 
@@ -18,7 +18,6 @@ export default function App() {
     setTask({
       text: e.target.value,
       completed: false,
-      index: tasks.length,
       id: task.id,
     });
   };
@@ -39,12 +38,14 @@ export default function App() {
       return task;
     });
     setTasks(updatedTasks);
-    console.log(tasks);
+  };
+
+  const toggleEdit = (e) => {
+    const node = e.target.parentNode.parentNode;
   };
 
   const deleteTask = (e) => {
     const node = e.target.parentNode.parentNode;
-    console.log(node.dataset.key);
     const updatedTasks = tasks.filter((task) => node.dataset.key !== task.id);
     setTasks(updatedTasks);
   };
@@ -69,11 +70,21 @@ export default function App() {
           handleChange={inputTask}
           handleClick={submitTask}
         />
-        <Tasks
-          tasks={tasks}
-          doneBtnClick={toggleComplete}
-          deleteBtnClick={deleteTask}
-        />
+        <ul className="task-list">
+          {tasks.map((task) => {
+            return (
+              <Task
+                key={task.id}
+                id={task.id}
+                completed={task.completed}
+                text={task.text}
+                doneBtnClick={toggleComplete}
+                editBtnClick={toggleEdit}
+                deleteBtnClick={deleteTask}
+              />
+            );
+          })}
+        </ul>
       </main>
       <Footer />
     </>

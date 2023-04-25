@@ -5,16 +5,14 @@ import { faSquareCheck } from "@fortawesome/free-regular-svg-icons";
 export default function Header(props) {
   return (
     <header>
-      <a href="#">
+      <div>
         <FontAwesomeIcon
           icon={faSquareCheck}
           className="logo"
           onClick={props.handleClick}
         />
-      </a>
-      <a href="#">
         <h1 className="title">To-Do List</h1>
-      </a>
+      </div>
     </header>
   );
 }

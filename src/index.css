@@ -30,18 +30,18 @@ input {
 }
 
 header {
+  color: var(--clr-text);
+}
+
+header div {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 12px;
-  color: var(--clr-tertiary);
-  padding: 50px 20px 30px;
-  height: 10vh;
-}
-
-header a {
   color: inherit;
   text-decoration: none;
+  cursor: pointer;
+  padding: 40px 20px 20px;
 }
 
 .logo {
@@ -112,11 +112,19 @@ header a {
 }
 
 .task-btn {
-  padding-top: 3px;
+  border: none;
+  background-color: transparent;
   cursor: pointer;
+  height: 20px;
+  width: 20px;
 }
 
-.task-btn > * {
+.task-btn:focus {
+  border: 1.5px solid black;
+  outline: none;
+}
+
+.task-btn > svg {
   pointer-events: none;
 }
 
