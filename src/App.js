@@ -24,6 +24,7 @@ export default function App() {
 
   const submitTask = (e) => {
     e.preventDefault();
+    if (!task.text) return;
     setTasks(tasks.concat(task));
     setTask({ text: "", completed: false, id: uniqid() });
   };
@@ -49,11 +50,6 @@ export default function App() {
       return task;
     });
     setTasks(updatedTasks);
-    // setTask({
-    //   text: e.target.value,
-    //   completed: false,
-    //   id: task.id,
-    // });
   };
 
   const deleteTask = (e) => {
