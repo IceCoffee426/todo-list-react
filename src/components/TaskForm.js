@@ -6,7 +6,6 @@ export default function TodoForm(props) {
       <input
         type="text"
         placeholder="Enter task"
-        id="taskInput"
         value={props.text}
         aria-label="Enter task"
         onChange={props.handleChange}

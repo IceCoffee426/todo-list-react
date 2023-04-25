@@ -61,14 +61,16 @@ header div {
   height: 80px;
 }
 
-.task-form input {
+.task-form input,
+.edit-form input {
   border: 1px solid black;
   border-radius: 20px;
   padding-left: 10px;
 }
 
 .task-form button {
-  background-color: var(--clr-primary);
+  background-color: var(--clr-tertiary);
+  color: #fff;
   padding: 5px;
   border: none;
   border-radius: 20px;
@@ -78,9 +80,16 @@ header div {
 
 .task-form button:focus,
 .task-form button:hover,
-.task-form input:focus {
+.task-form input:focus,
+.edit-form input,
+a:focus {
   border: 1.5px solid black;
   outline: none;
+}
+
+a:focus {
+  border-radius: 5px;
+  text-decoration: none;
 }
 
 .task-list {
@@ -90,6 +99,7 @@ header div {
 
 .task-list li {
   margin: auto;
+  min-height: 20px;
   max-width: 30rem;
   background-color: var(--clr-secondary);
   color: var(--clr-text);
@@ -103,6 +113,9 @@ header div {
 
 .task-list li.completed {
   background-color: var(--clr-primary);
+}
+
+.task-list li.completed p {
   text-decoration: line-through;
 }
 
@@ -117,6 +130,7 @@ header div {
   cursor: pointer;
   height: 20px;
   width: 20px;
+  border-radius: 5px;
 }
 
 .task-btn:focus {
@@ -126,6 +140,28 @@ header div {
 
 .task-btn > svg {
   pointer-events: none;
+}
+
+.edit-form {
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.edit-form input {
+  flex: 1;
+  width: 100%;
+  text-decoration: none;
+}
+
+.edit-form button {
+  border: none;
+  background-color: var(--clr-text);
+  color: #fff;
+  border-radius: 20px;
+  padding: 5px 10px;
+  cursor: pointer;
 }
 
 footer {
@@ -147,7 +183,13 @@ footer a {
   text-decoration: none;
 }
 
-footer a:hover,
-footer a:focus {
+footer a:hover {
   text-decoration: underline;
+}
+
+@media (min-width: 900px) {
+  footer {
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }

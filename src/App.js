@@ -40,8 +40,20 @@ export default function App() {
     setTasks(updatedTasks);
   };
 
-  const toggleEdit = (e) => {
-    const node = e.target.parentNode.parentNode;
+  const handleEdit = (e) => {
+    const key = e.target.parentNode.parentNode.dataset.key;
+    const updatedTasks = tasks.map((task) => {
+      if (key === task.id) {
+        return { ...task, text: e.target.value };
+      }
+      return task;
+    });
+    setTasks(updatedTasks);
+    // setTask({
+    //   text: e.target.value,
+    //   completed: false,
+    //   id: task.id,
+    // });
   };
 
   const deleteTask = (e) => {
@@ -79,7 +91,7 @@ export default function App() {
                 completed={task.completed}
                 text={task.text}
                 doneBtnClick={toggleComplete}
-                editBtnClick={toggleEdit}
+                handleEditChange={handleEdit}
                 deleteBtnClick={deleteTask}
               />
             );
