@@ -70,7 +70,7 @@ header div {
 
 .task-form button {
   background-color: var(--clr-tertiary);
-  color: white;
+  color: var(--clr-text);
   padding: 5px;
   border: none;
   border-radius: 20px;
