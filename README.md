@@ -20,6 +20,8 @@ This is an app created using React.js which allows the user to input Todo tasks,
 
 ## Version History
 
+- 1.1 (02/05/2023)
+  - Rebuilt with Vite
 - 1.0 (09/04/2023)
   - Initial release
 

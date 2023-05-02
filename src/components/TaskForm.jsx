@@ -1,6 +1,4 @@
-import React from "react";
-
-export default function TodoForm(props) {
+export default function TaskForm(props) {
   return (
     <form className="task-form">
       <input
